@@ -14,8 +14,6 @@ services:
 
   elasticsearch:
      image: elasticsearch:2
-     network:
-      - elastic_network
      ports:
       - "9200:9200"
 
