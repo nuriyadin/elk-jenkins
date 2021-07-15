@@ -1,4 +1,4 @@
-FROM jenkins:jenkins
+FROM jenkins:latest
 
 MAINTAINER Nuriyadin
 
