@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#clean anything with same name to get rid of clashes
+# Bersihkan dan hapus dulu Jenkins
 docker-compose down
 
-docker pull kayan/myjenkins:latest
+docker pull jenkins/jenkins:latest
