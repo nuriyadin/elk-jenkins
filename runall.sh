@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-#clean anything with same name to get rid of clashes
+# Bersihkan semuanya
 docker-compose down
 docker-compose -f docker-compose-elk.yml down
 
-#run elk stack
+# Jalankan elk stack
 docker-compose -f docker-compose-elk.yml up &
 
 sleep 20
 
-#run jenkins
+# Jalankan jenkins
 docker-compose up &
