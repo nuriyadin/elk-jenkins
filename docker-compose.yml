@@ -15,9 +15,7 @@ services:
       - artifactory
     volumes:
      - "./jobs:/var/jenkins_home/jobs/"
-     - "./m2deps:/var/jenkins_home/.m2/repository/"
-     - "./downloads:/var/jenkins_home/downloads"
-    secrets:
+     secrets:
      - artifactoryPassword
   mysonar:
     image: sonarqube:6.3.1
