@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-#get needed stuff 1st
+# Download dulu yang dibutuhkan
 ./download.sh
 
-#clean anything with same name to get rid of clashes
+# Bersihkan dan hapus
 docker-compose down
 docker-compose -f docker-compose-elk.yml down
 
-#update with actual password
+# Update password
 echo "password" > ./secrets/artifactoryPassword
 
-#update older jenkins image, make sure it doesnt use cache
+# Update image jenkins yang lama, pastikan tidak menggunakan cache
 docker-compose build --no-cache
 
-#run build stack
+# Jalankan stack
 docker-compose up &
 
-#run elk stack
+# Jalankan elk stack
 docker-compose -f docker-compose-elk.yml up
